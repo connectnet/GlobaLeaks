@@ -113,8 +113,8 @@ if echo "$DISTRO_CODENAME" | grep -vqE "^bookworm$" ; then
   prompt_for_continuation
 fi
 
-if [ -f /etc/init.d/globaleaks ]; then
-  DO "/etc/init.d/globaleaks stop"
+if [ -f /etc/systemd/system/globaleaks.service ]; then
+  DO "systemctl stop globaleaks"
 fi
 
 # align apt-get cache to up-to-date state on configured repositories
@@ -182,7 +182,7 @@ if [ -d /globaleaks/deb ]; then
   fi
   DO "apt -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true update"
   DO "apt-get -y --allow-unauthenticated install globaleaks"
-  DO "/etc/init.d/globaleaks restart"
+  DO "systemctl restart globaleaks"
 else
   DO "apt-get update -y"
   if [[ $VERSION ]]; then
