@@ -11,6 +11,7 @@ The guide assumes you run a Debian based system and that the following software 
  python3-sphinx python3-virtualenv tor-y
 
 Then you should edit the config to enable the Tor protocol:
+
 .. code:: sh
 
   sudo nano /etc/tor/torrc
