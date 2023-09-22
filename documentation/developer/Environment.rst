@@ -7,20 +7,8 @@ Requirements
 ============
 The guide assumes you run a Debian based system and that the following software is installed on your system:
 
-* debhelper
-* devscripts
-* dh-apparmor
-* dh-python
-* git
-* grunt-cli
-* node
-* npm
-* python3
-* python3-dev
-* python3-pip
-* python3-setuptools
-* python3-sphinx
-* python3-virtualenv
+apt-get install debhelper devscripts dh-apparmor dh-python git npm python3 python3-dev python3-pip python3-setuptools python3.11-venv
+python3-sphinx python3-virtualenv -y
 
 Setup
 =====
