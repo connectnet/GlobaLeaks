@@ -12,13 +12,20 @@ The guide assumes you run a Debian based system and that the following software 
 
 Then you should edit the config to enable the Tor protocol:
 .. code:: sh
+
   sudo nano /etc/tor/torrc
+
 Remove the # character from lines ControlPort 9051 and CookieAuthentication 1 (line ~57)
 Restart Tor
+
 .. code:: sh
+
   /etc/init.d/tor restart
+
 Add permission yourself to read the auth cookie by
+
 .. code:: sh
+
   /usr/sbin/usermod -a -G debian-tor [yourlinuxuser]
 
 Setup
